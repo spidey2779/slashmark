@@ -1,0 +1,129 @@
+@media (width < 750px){
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    /* @media all and (orientation:portrait) {
+        
+        .home{
+            flex-direction: row;
+        }
+        } */
+    section{
+        overflow: hidden;
+    }
+    nav{
+        right: 0px;
+        height: 50px;
+        padding: 0px 5vw 0px 25px;
+    }
+   
+    .leftNav{
+        font-size: 20px;
+        gap: 15px;
+    }
+    .leftNav img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    /* home */
+
+    .home{
+        flex-direction: column-reverse;
+    }
+    .rightHome img{
+        height: 50vh;
+    }
+    .leftHome{
+        justify-content: start;
+        line-height: 50px;
+        width: 100%;
+    }
+    .leftHome h1{
+        text-align: start;
+        font-size: 40px;
+    }
+    /* animation */
+    .leftHome h1{
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+                   blinkTextCursor 500ms steps(44) infinite normal;
+      }
+      @keyframes typewriter{
+        from{width: 0;}
+        to{width: 7em;}
+      }
+      @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+      }
+    .leftHome h3{
+        text-align: start;
+        font-size: 27px;
+    }
+    /* About */
+    .leftAbout h1{
+        font-size: 48px;
+    }
+
+    /* menu icon */
+    
+    .dash1,
+  .dash2,
+  .dash3 {
+    height: 7px;
+    width: 55px;
+  }
+ 
+  .barMain{
+    width: 90vw;
+    font-size: 15px;
+   }
+
+   .contact h2{
+    font-size: 30px;
+   }
+   .contact a{
+    margin: 0px 20px;
+
+   }
+   .icons{
+       margin: 20px;
+   }
+
+
+}
+
+@media(width < 400px){
+    nav{
+        padding-left: 10px;
+    }
+    .container{
+        top: 3px;
+    }
+    .afterNav{
+        width: 200px;
+    }
+    
+    .leftAbout h1{
+        font-size: 45px;
+    }
+    .leftAbout h3{
+        line-height: 30px;
+    }
+    .about{
+        height: auto;
+    }
+    .rightAbout{
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .contact{
+        padding: 15px 0px;
+    }
+   
+    .contact h2{
+        margin: 20px ;
+    }
+}

@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.miniMouse{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    z-index: 110;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) ;
+    transition-duration:  0.1 sec;
+    opacity: 0.8;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+.main{
+ background-color: rgb(42, 41, 41);
+ /* background-color: red; */
+    height: 100vh;
+    
+}
+.afterNav,.container{
+    position: absolute;
+    display: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 0px 7vw 0px 40px;
+    z-index: 99;
+    font-family: sans-serif;
+    /* background-color: blue; */
+    
+}
+.leftNav {
+    display: flex;
+    font-size: 25px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 20px;
+    cursor: default;
+}
+.leftNav img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.rightNav{
+    display: flex;
+    justify-content: space-between;
+    gap:5vw;
+}
+.rightNav a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.rightNav a:hover{
+    color: rgb(153, 145, 145);
+}
+/* body */
+.home{
+    color: white;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px 0px 20px;
+    min-height:  100vh ;
+    max-height: fit-content;
+    position: relative;
+}
+.leftHome{
+    line-height: 70px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    justify-content: center;
+    width: 50%;
+    cursor: default;
+    
+}
+
+
+/* home animations */
+.leftHome h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+   font-size: 60px;
+   text-align: center;
+   font-family: 'Lobster', cursive;
+  }
+  
+ /* Animation */
+.leftHome h1{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 8em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+.leftHome h3{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+.rightHome{
+    overflow: auto;
+}
+.rightHome img{
+    margin-top: 100px;
+    height: 70vh;
+    width: fit-content;
+    margin-left: 20px;
+    margin-right: 10vw;
+    border-radius: 10px;
+    
+}
+/* About Seciton */
+.about{
+    display: flex;  
+    min-height:  calc(100vh - 70px);
+    max-height: fit-content;
+    background-color: blueviolet;
+    cursor: default;
+    color: white;
+    font-family: sans-serif;
+    position: relative;
+}
+.leftAbout{
+    width: 50%;
+    display: flex;
+   align-items: center;
+   padding: 40px 20px;
+   font-size: 17px;
+   flex-direction: column;
+   justify-content: center;
+   gap: 40px;
+
+}
+.leftAbout h1{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+}
+.leftAbout h3{
+    line-height: 40px;
+}
+.rightAbout{
+    width: 50%;
+    height: auto;
+    padding: 40px 20px;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+/* bar main */
+.barMain {
+    width: 100%;
+    background-color: rgb(215, 234, 251);
+    height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.one {
+    background-color: #4CAF50;
+    height: 100%;
+    text-align: right;
+    line-height: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two {
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Custom styling for each bar */
+.barMain:nth-child(1) .one {
+ 
+    width: 80%; /* 80% for the first bar */
+}
+
+.barMain:nth-child(2) .one {
+    width: 70%; /* 70% for the second bar */
+}
+
+.barMain:nth-child(3) .one {
+    width: 40%; /* 40% for the third bar */
+}
+/* contact */
+.contact{
+    height: auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    padding: 30px 0px;
+    cursor: default;
+
+}
+.contact h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.contact a{
+    
+    text-decoration: none;
+    margin: 0px 40px;
+    padding: 5px;
+}
+.icons{
+    display: flex;
+    margin: 40px auto;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
+
+}
+.contact a i{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    
+
+}
+.contact a i:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+
+/* media queries */
+
+@media(width < 1000px){
+  /* menu button animation  */
+  
+.container {
+    position: fixed;
+    top: 7px;
+    right: 0px;
+    height: auto;
+    width: auto;
+    scale: 0.6;
+    overflow: hidden;
+    background: transparent;
+    /* background: linear-gradient(to right, #90d60e, #d60606bd); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 112;
+  }
+  
+  .dash1,
+  .dash2,
+  .dash3 {
+    position: relative;
+    height: 10px;
+    width: 60px;
+    background-color: #fffcfc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .dash3 {
+    margin-bottom: none;
+  }
+  
+  .clicked .dash1 {
+    transform: translateY(20px) rotate(135deg);
+  }
+  
+  .clicked .dash2 {
+    transform: translate(100vw);
+  }
+  
+  .clicked .dash3 {
+    transform: translateY(-20px) rotate(-135deg);
+  }
+
+  /* right nav */
+   .rightNav{
+    display: none;
+   }
+  .afterNav{
+    display: flex;
+    position: fixed;
+    background-color: rgb(55, 0, 255);
+    top:0px;
+    right: 0px;
+    height: 100vh;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9vh;
+    padding-left: 5vw;
+    font-family: sans-serif;
+    transform: translateX(300px);
+    transition-property: transform ;
+    transition-duration: 0.5s;
+    z-index: 110;
+
+  }
+  .active{
+    transform: translateX(0px);
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+}
+  .afterNav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    /* background-color: black; */
+    width: 100%;
+    margin: 3vh 0px;
+    
+  }
+  .afterNav a:hover{
+    color: gray;
+  }
+   /* home */
+   .rightHome img{
+    margin-right: 30px;
+
+   }
+   .leftHome{
+    line-height: 40px;
+    width: 50%;
+    align-items: center;
+   }
+   .leftHome h1{
+    font-size: 45px;
+    margin-top: 20px;
+   }
+   .leftHome h3{
+    font-size: 30px;
+   }
+   .about{
+    flex-direction: column;
+   }
+   .rightAbout{
+    width: 100%;
+    gap:15px;
+   }
+   .leftAbout{
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+   }
+   .barMain{
+    width: 70vw;
+   }
+}
+
+
+
+
